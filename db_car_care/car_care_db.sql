@@ -12,3 +12,4 @@ CREATE TABLE programar_rutinas(id_rut_programadas INT PRIMARY KEY AUTO_INCREMENT
 FOREIGN KEY (fk_id_vehiculos) REFERENCES vehiculos (id_vehiculos),
 FOREIGN KEY (fk_id_rutinas) REFERENCES rutinas (id_rutinas));
 
+/*soy un comentario*/
