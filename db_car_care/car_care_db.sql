@@ -10,13 +10,22 @@ modelo VARCHAR(150),
 tipo_vehiculo VARCHAR(150));
 
 -- TABLA RUTINAS
-CREATE TABLE rutinas(id_rutinas INT PRIMARY KEY AUTO_INCREMENT,nombre VARCHAR(150),descripcion VARCHAR(255));
+CREATE TABLE rutinas(
+id_rutinas INT PRIMARY KEY AUTO_INCREMENT,
+nombre VARCHAR(150),
+descripcion VARCHAR(255));
 
-CREATE TABLE programar_rutinas(id_rut_programadas INT PRIMARY KEY AUTO_INCREMENT, fk_id_vehiculos int, fk_id_rutinas int, fecha VARCHAR(150),
+CREATE TABLE programar_rutinas(id_rut_programadas INT PRIMARY KEY AUTO_INCREMENT, 
+fk_id_vehiculos INT, 
+fk_id_rutinas INT, 
+fecha VARCHAR(150),
 FOREIGN KEY (fk_id_vehiculos) REFERENCES vehiculos (id_vehiculos),
 FOREIGN KEY (fk_id_rutinas) REFERENCES rutinas (id_rutinas));
 
-/*soy un comentario*/
+INSERT INTO vehiculos VALUES(NULL,'chevrolet','chevy 2006','carro');
+INSERT INTO rutinas VALUES(NULL,'Motor','Cambio de aceite, Cambio de antiCongelante');
+SELECT * FROM vehiculos, rutinas, programar_rutinas
+INSERT INTO programar_rutinas VALUES(NULL,2,1,'02-11-2023');
 /*------------------------------------Procedure de la tabla Vehiculos CRUD------------------------------------------*/
 
 /*PROCEDURE PARA INSERTAR E ACTUALIZAR*/
@@ -49,4 +58,19 @@ END;;
 
 
 /*PROCEDURE PARA ELIMINAR*/
+delimiter ;;
+CREATE PROCEDURE eliminar_vehiculos(
+IN _id_vehiculos INT)
+BEGIN
+DELETE FROM vehiculos AS v WHERE v.id_vehiculos = _id_vehiculos;
+END;;
 
+/*------------------------------------Vista para Mostrar toda la consulta ------------------------------------------*/
+CREATE VIEW vista_programar_rutinas AS
+SELECT v.marca AS 'Marca', v.modelo AS 'Modelo y Año', r.nombre AS 'Nombre de la Rutina', r.descripcion AS 'Descripcion de la Rutina', pr.fecha AS 'Fecha de Rutina programa'
+FROM programar_rutinas pr
+INNER JOIN vehiculos v ON pr.fk_id_vehiculos = v.id_vehiculos
+INNER JOIN rutinas r ON pr.fk_id_rutinas = r.id_rutinas;
+
+
+SELECT * FROM vista_programar_rutinas;
