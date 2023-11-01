@@ -128,13 +128,6 @@ END;;
 CREATE VIEW vista_programar_rutinas AS
 SELECT v.marca AS 'Marca', v.modelo AS 'Modelo y Año', r.nombre AS 'Nombre de la Rutina', r.descripcion AS 'Descripcion de la Rutina', pr.fecha AS 'Fecha de Rutina programada'
 
-CREATE TABLE programar_rutinas(id_rut_programadas INT PRIMARY KEY AUTO_INCREMENT, 
-fk_id_vehiculos INT, 
-fk_id_rutinas INT, 
-fecha VARCHAR(150),
-FOREIGN KEY (fk_id_vehiculos) REFERENCES vehiculos (id_vehiculos),
-FOREIGN KEY (fk_id_rutinas) REFERENCES rutinas (id_rutinas));
-
 
 -- MOSTRAR
 DROP PROCEDURE IF EXISTS mostrar_rutinas_programadas 
