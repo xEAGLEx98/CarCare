@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>6fb55543-b293-412d-a567-845c3a2ff98f</ProjectGuid>
+    <ProjectGuid>caa34212-3456-4082-aac9-08a13865e741</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ManejadorCarCare</RootNamespace>

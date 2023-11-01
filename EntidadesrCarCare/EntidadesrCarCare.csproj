@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>c8cbc67d-aa9d-4d75-8acc-487eacdaed4e</ProjectGuid>
+    <ProjectGuid>c0189c8d-f421-432c-9bb9-22af48a69048</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AccesoDatoCarCare</RootNamespace>
-    <AssemblyName>AccesoDatoCarCare</AssemblyName>
+    <RootNamespace>EntidadesrCarCare</RootNamespace>
+    <AssemblyName>EntidadesrCarCare</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
