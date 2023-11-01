@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\PresentacionesCarCare\\PresentacionesCarCare\\PresentacionesCarCare.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\s\\CarCare\\PresentacionesCarCare\\PresentacionesCarCare.csproj",
       "projectName": "PresentacionesCarCare",
-      "projectPath": "C:\\Users\\LENOVO\\source\\repos\\PresentacionesCarCare\\PresentacionesCarCare\\PresentacionesCarCare.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\s\\CarCare\\PresentacionesCarCare\\PresentacionesCarCare.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\source\\repos\\PresentacionesCarCare\\PresentacionesCarCare\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\s\\CarCare\\PresentacionesCarCare\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

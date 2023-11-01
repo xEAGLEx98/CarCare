@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="ConectarBd">
+      <HintPath>..\..\..\..\Downloads\ConectarBd.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
