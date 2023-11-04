@@ -1,14 +1,18 @@
-﻿using System;
-using ACarCare;
-using System.Windows.Forms;
+﻿using ACarCare;
+using ECarCare;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MCarCare
 {
-    public class ManejadorRutinas:ICrud
+    public class ManejadorRutinasProgramadas : ICrud
     {
-        AccesoRutinas rutinas = new AccesoRutinas();
-
+        AccesoProgramarRutinas rutinas = new AccesoProgramarRutinas();
         public void Borrar(dynamic entidad)
         {
             //Tomar el resultado del messagebox.
@@ -18,6 +22,7 @@ namespace MCarCare
                 //Borrar registro.
                 rutinas.Borrar(entidad);
         }
+
         public DataGridViewColumn Boton(string texto, Color color)
         {
             // Crear una columna de botón

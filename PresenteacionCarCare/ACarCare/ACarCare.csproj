@@ -32,10 +32,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ConectarBd">
-      <HintPath>..\..\..\..\Downloads\ConectarBd.dll</HintPath>
+      <HintPath>..\..\..\..\..\Downloads\ConectarBd.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />

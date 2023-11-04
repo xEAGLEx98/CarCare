@@ -1,23 +1,23 @@
 ﻿using System;
-using ACarCare;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
+using ACarCare;
 
 namespace MCarCare
 {
-    public class ManejadorRutinas:ICrud
+    public class ManejadorVehiculos : ICrud
     {
-        AccesoRutinas rutinas = new AccesoRutinas();
-
+        AccesoVehiculos vehiculos = new AccesoVehiculos();
         public void Borrar(dynamic entidad)
         {
             //Tomar el resultado del messagebox.
-            DialogResult resultado = MessageBox.Show(String.Format("¿Desea eliminar este registro {0}?", entidad.Nombre), "!Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show(String.Format("¿Desea eliminar este registro {0}?", entidad.Marca), "!Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //Si el resultado es si en la pregunta de desea eliminar.
             if (resultado == DialogResult.Yes)
                 //Borrar registro.
-                rutinas.Borrar(entidad);
+                vehiculos.Borrar(entidad);
         }
+
         public DataGridViewColumn Boton(string texto, Color color)
         {
             // Crear una columna de botón
@@ -34,7 +34,7 @@ namespace MCarCare
         public void Guardar(dynamic entidad)
         {
             //Guardar y mostrar mensaje de guardado.
-            rutinas.Guardar(entidad);
+            vehiculos.Guardar(entidad);
             MessageBox.Show("Rutina guardada correctamente", "!Información!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -44,7 +44,7 @@ namespace MCarCare
             tabla.Columns.Clear();
             tabla.RowTemplate.Height = 30;
             //Fuente de datos.
-            tabla.DataSource = rutinas.Mostrar(filtro).Tables["rutinas"];
+            tabla.DataSource = vehiculos.Mostrar(filtro).Tables["vehiculos"];
             //AGREGAR BOTONES.
             //EDITAR
             tabla.Columns.Insert(3, Boton("Editar", Color.Green));

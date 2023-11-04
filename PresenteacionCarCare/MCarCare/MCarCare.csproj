@@ -33,6 +33,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,8 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICrud.cs" />
     <Compile Include="ManejadorRutinas.cs" />
+    <Compile Include="ManejadorRutinasProgramadas.cs" />
+    <Compile Include="ManejadorVehiculos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ACarCare\ACarCare.csproj">
+      <Project>{ad9b0cb4-44b0-4729-b29d-51e608c4be81}</Project>
+      <Name>ACarCare</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ECarCare\ECarCare.csproj">
+      <Project>{82ae48be-cdcc-4ff2-a314-7395b7cf47e6}</Project>
+      <Name>ECarCare</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
