@@ -6,15 +6,15 @@ namespace ACarCare
 {
     public class AccesoProgramarRutinas : ICrud
     {
-        Base baseDatos = new Base("localhost", "root", "", "car_care");
+        Base baseDatos = new Base("localhost", "root", "","car_care",3306);
         public void Borrar(dynamic entidad)
         {
-            baseDatos.Comando(String.Format("CALL borrar_rutinas_programadas({0})", entidad.IdRutProgramadas));
+            baseDatos.comando(String.Format("CALL borrar_rutinas_programadas({0})", entidad.IdRutProgramadas));
         }
 
         public void Guardar(dynamic entidad)
         {
-            baseDatos.Comando(String.Format("CALL insertar_rutinas_programadas({0}, {1}, '{2}', {3})", entidad.FkIdVehiculos, entidad.FkIdRutinas, entidad.Fecha, entidad.IdRutProgramadas));
+            baseDatos.comando(String.Format("CALL insertar_rutinas_programadas({0}, {1}, '{2}', {3})", entidad.FkIdVehiculos, entidad.FkIdRutinas, entidad.Fecha, entidad.IdRutProgramadas));
         }
 
         public DataSet Mostrar(string filtro)

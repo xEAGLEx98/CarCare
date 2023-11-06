@@ -47,9 +47,9 @@ namespace MCarCare
             tabla.DataSource = vehiculos.Mostrar(filtro).Tables["vehiculos"];
             //AGREGAR BOTONES.
             //EDITAR
-            tabla.Columns.Insert(3, Boton("Editar", Color.Green));
+            tabla.Columns.Insert(4, Boton("Editar", Color.Green));
             //BORRAR
-            tabla.Columns.Insert(4, Boton("Eliminar", Color.Red));
+            tabla.Columns.Insert(5, Boton("Eliminar", Color.Red));
             //OCULTAR ID
             tabla.Columns[0].Visible = false;
         }

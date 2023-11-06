@@ -1,0 +1,8 @@
+C:\Users\LENOVO\Desktop\s\CarCare\PresenteacionCarCare\ACarCare\bin\Debug\ACarCare.dll
+C:\Users\LENOVO\Desktop\s\CarCare\PresenteacionCarCare\ACarCare\bin\Debug\ACarCare.pdb
+C:\Users\LENOVO\Desktop\s\CarCare\PresenteacionCarCare\ACarCare\bin\Debug\ConectarBd.dll
+C:\Users\LENOVO\Desktop\s\CarCare\PresenteacionCarCare\ACarCare\obj\Debug\ACarCare.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\s\CarCare\PresenteacionCarCare\ACarCare\obj\Debug\ACarCare.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\s\CarCare\PresenteacionCarCare\ACarCare\obj\Debug\ACarCare.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\s\CarCare\PresenteacionCarCare\ACarCare\obj\Debug\ACarCare.dll
+C:\Users\LENOVO\Desktop\s\CarCare\PresenteacionCarCare\ACarCare\obj\Debug\ACarCare.pdb
