@@ -2,12 +2,13 @@
 using System.Drawing;
 using System.Windows.Forms;
 using ACarCare;
-
+using Crud;
 namespace MCarCare
 {
     public class ManejadorVehiculos : ICrud
     {
         AccesoVehiculos vehiculos = new AccesoVehiculos();
+        Grafico grafico = new Grafico();
         public void Borrar(dynamic entidad)
         {
             //Tomar el resultado del messagebox.
@@ -16,19 +17,6 @@ namespace MCarCare
             if (resultado == DialogResult.Yes)
                 //Borrar registro.
                 vehiculos.Borrar(entidad);
-        }
-
-        public DataGridViewColumn Boton(string texto, Color color)
-        {
-            // Crear una columna de botón
-            DataGridViewButtonColumn boton = new DataGridViewButtonColumn();
-
-            // Configurar la apariencia de la columna de botón
-            boton.Text = texto;
-            boton.UseColumnTextForButtonValue = true; // Usa el texto como valor del botón
-            boton.FlatStyle = FlatStyle.Flat; // Estilo plano
-            boton.DefaultCellStyle.BackColor = color; // Color de fondo
-            return boton;
         }
 
         public void Guardar(dynamic entidad)
@@ -47,9 +35,9 @@ namespace MCarCare
             tabla.DataSource = vehiculos.Mostrar(filtro).Tables["vehiculos"];
             //AGREGAR BOTONES.
             //EDITAR
-            tabla.Columns.Insert(4, Boton("Editar", Color.Green));
+            tabla.Columns.Insert(4, grafico.Boton("Editar", Color.Green));
             //BORRAR
-            tabla.Columns.Insert(5, Boton("Eliminar", Color.Red));
+            tabla.Columns.Insert(5, grafico.Boton("Eliminar", Color.Red));
             //OCULTAR ID
             tabla.Columns[0].Visible = false;
         }

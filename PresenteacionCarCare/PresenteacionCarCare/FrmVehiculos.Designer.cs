@@ -37,11 +37,11 @@
             // dtgVehiculos
             // 
             this.dtgVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgVehiculos.Location = new System.Drawing.Point(161, 202);
+            this.dtgVehiculos.Location = new System.Drawing.Point(101, 123);
             this.dtgVehiculos.Name = "dtgVehiculos";
             this.dtgVehiculos.RowHeadersWidth = 51;
             this.dtgVehiculos.RowTemplate.Height = 24;
-            this.dtgVehiculos.Size = new System.Drawing.Size(461, 169);
+            this.dtgVehiculos.Size = new System.Drawing.Size(674, 298);
             this.dtgVehiculos.TabIndex = 0;
             this.dtgVehiculos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgVehiculos_CellClick);
             this.dtgVehiculos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgVehiculos_CellEnter);

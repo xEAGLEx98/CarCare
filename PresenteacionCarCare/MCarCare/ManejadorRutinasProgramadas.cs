@@ -1,18 +1,14 @@
 ﻿using ACarCare;
-using ECarCare;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Crud;
 namespace MCarCare
 {
     public class ManejadorRutinasProgramadas : ICrud
     {
         AccesoProgramarRutinas rutinas = new AccesoProgramarRutinas();
+        Grafico grafico = new Grafico();
         public void Borrar(dynamic entidad)
         {
             //Tomar el resultado del messagebox.
@@ -23,18 +19,6 @@ namespace MCarCare
                 rutinas.Borrar(entidad);
         }
 
-        public DataGridViewColumn Boton(string texto, Color color)
-        {
-            // Crear una columna de botón
-            DataGridViewButtonColumn boton = new DataGridViewButtonColumn();
-
-            // Configurar la apariencia de la columna de botón
-            boton.Text = texto;
-            boton.UseColumnTextForButtonValue = true; // Usa el texto como valor del botón
-            boton.FlatStyle = FlatStyle.Flat; // Estilo plano
-            boton.DefaultCellStyle.BackColor = color; // Color de fondo
-            return boton;
-        }
 
         public void Guardar(dynamic entidad)
         {
@@ -52,9 +36,9 @@ namespace MCarCare
             tabla.DataSource = rutinas.Mostrar(filtro).Tables["rutinas"];
             //AGREGAR BOTONES.
             //EDITAR
-            tabla.Columns.Insert(3, Boton("Editar", Color.Green));
+            tabla.Columns.Insert(3, grafico.Boton("Editar", Color.Green));
             //BORRAR
-            tabla.Columns.Insert(4, Boton("Eliminar", Color.Red));
+            tabla.Columns.Insert(4, grafico.Boton("Eliminar", Color.Red));
             //OCULTAR ID
             tabla.Columns[0].Visible = false;
         }

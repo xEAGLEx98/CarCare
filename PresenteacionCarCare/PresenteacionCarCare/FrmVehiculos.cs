@@ -25,7 +25,6 @@ namespace PresenteacionCarCare
 
         private void FrmVehiculos_Load(object sender, EventArgs e)
         {
-            Actualizar();
         }
         //Mostrar vehiculos por filtro
         void Actualizar()
@@ -36,8 +35,8 @@ namespace PresenteacionCarCare
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             vehiculo.IdVehiculo = -1;
-            //FrmVehiculosAdd agregar = new FrmVehiculosAdd();
-            //agregar.ShowDialog();
+            FrmVehiculosAdd agregar = new FrmVehiculosAdd();
+            agregar.ShowDialog();
         }
 
         private void dtgVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -49,8 +48,8 @@ namespace PresenteacionCarCare
             switch (columna)
             {
                 case 4: {
-                        //FrmVehiculosAdd agregar = new FrmVehiculosAdd();
-                        //agregar.ShowDialog();
+                        FrmVehiculosAdd agregar = new FrmVehiculosAdd();
+                        agregar.ShowDialog();
                         Actualizar();
                     }
                     break;

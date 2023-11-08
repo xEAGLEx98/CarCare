@@ -16,9 +16,9 @@ namespace ACarCare
             baseDatos.comando(String.Format("CALL insertar_vehiculos('{0}', '{1}', '{2}', {3})",entidad.Marca, entidad.Modelo, entidad.TipoVehiculo, entidad.IdVehiculo));
         }
 
-        public DataSet Mostrar(string filtro)
+        public DataSet Mostrar(string filtro)//CALL mostrar_vehiculos('%{0}%')
         {
-            return baseDatos.Obtener(string.Format("call mostrar_vehiculos('%{0}%')", filtro), "vehiculos");
+            return baseDatos.Obtener(string.Format("CALL mostrar_vehiculos('%{0}%')", filtro), "vehiculos");
         }
     }
 }

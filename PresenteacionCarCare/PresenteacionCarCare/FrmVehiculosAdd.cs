@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MCarCare;
 using ECarCare;
-
 namespace PresenteacionCarCare
 {
     public partial class FrmVehiculosAdd : Form
@@ -19,6 +18,11 @@ namespace PresenteacionCarCare
         {
             InitializeComponent();
             mv = new ManejadorVehiculos();
+            if (FrmVehiculos.vehiculo.IdVehiculo > 0)
+            {
+                txtMarca.Text = FrmVehiculos.vehiculo.Marca.ToString();
+                txtModelo.Text = FrmVehiculos.vehiculo.Modelo.ToString();
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -28,7 +32,6 @@ namespace PresenteacionCarCare
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Limpiar();
             mv.Guardar(new Vehiculos(FrmVehiculos.vehiculo.IdVehiculo, txtMarca.Text, txtModelo.Text, cmbTipoVehiculo.Text));
             Close();
         }
