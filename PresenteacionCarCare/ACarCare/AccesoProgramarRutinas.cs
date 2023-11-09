@@ -23,9 +23,9 @@ namespace ACarCare
         }
 
 
-        public DataSet MostrarCmb()
+        public DataSet MostrarCmb(string consulta, string tabla)
         {
-            return baseDatos.Obtener("SELECT * FROM programar_rutinas ","programar_rutinas");
+            return baseDatos.Obtener(consulta,tabla);
         }
     }
 }

@@ -19,8 +19,10 @@ namespace PresenteacionCarCare
         {
             InitializeComponent();
             mrp = new ManejadorRutinasProgramadas();
-            mrp.ExtraerDatos(cmbVehiculos, "vehiculos", "Vehiculos", "id_vehiculos");
-            mrp.ExtraerDatos(cmbRutinas, "rutinas", "Rutinas", "id_rutinas");
+            /*mrp.ExtraerDatos(cmbVehiculos, "vehiculos", "marca", "id_vehiculos");
+            mrp.ExtraerDatos(cmbRutinas, "rutinas", "nombre", "id_rutinas");*/
+            mrp.ExtraerDatos(cmbVehiculos);
+            mrp.ExtraerDatos(cmbRutinas);
             if (FrmProgramacionRutinas.rutinas.IdRutProgramadas > 0)
             {
                 cmbVehiculos.Text = FrmProgramacionRutinas.marcaVehiculo;
