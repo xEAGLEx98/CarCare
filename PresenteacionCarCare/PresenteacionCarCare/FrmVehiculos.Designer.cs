@@ -74,7 +74,6 @@
             this.Controls.Add(this.dtgVehiculos);
             this.Name = "FrmVehiculos";
             this.Text = "FrmVehiculos";
-            this.Load += new System.EventHandler(this.FrmVehiculos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgVehiculos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

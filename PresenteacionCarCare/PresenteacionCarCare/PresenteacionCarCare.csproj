@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAddRutinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddRutinas.Designer.cs">
+      <DependentUpon>FrmAddRutinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProgramacionRutinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProgramacionRutinas.Designer.cs">
+      <DependentUpon>FrmProgramacionRutinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRutinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRutinas.Designer.cs">
+      <DependentUpon>FrmRutinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRutinasProgramadasAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRutinasProgramadasAdd.Designer.cs">
+      <DependentUpon>FrmRutinasProgramadasAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVehiculos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +86,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmAddRutinas.resx">
+      <DependentUpon>FrmAddRutinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProgramacionRutinas.resx">
+      <DependentUpon>FrmProgramacionRutinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRutinas.resx">
+      <DependentUpon>FrmRutinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRutinasProgramadasAdd.resx">
+      <DependentUpon>FrmRutinasProgramadasAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmVehiculos.resx">
       <DependentUpon>FrmVehiculos.cs</DependentUpon>
     </EmbeddedResource>

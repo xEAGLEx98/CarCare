@@ -22,10 +22,6 @@ namespace PresenteacionCarCare
             InitializeComponent();
             mv = new ManejadorVehiculos();
         }
-
-        private void FrmVehiculos_Load(object sender, EventArgs e)
-        {
-        }
         //Mostrar vehiculos por filtro
         void Actualizar()
         {

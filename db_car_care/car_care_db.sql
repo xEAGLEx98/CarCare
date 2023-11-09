@@ -36,7 +36,7 @@ delimiter ;;
 CREATE PROCEDURE mostrar_vehiculos(
 IN _filtro VARCHAR(150))
 BEGIN
-SELECT v.marca, v.modelo , v.tipo_vehiculo FROM vehiculos AS v WHERE v.marca = _filtro;
+SELECT * FROM vehiculos WHERE marca LIKE _filtro ORDER BY id_vehiculos;
 END;;
 
 
@@ -126,7 +126,8 @@ END;;
 
 -- VISTA PARA MOSTRAR RUTINAS PROGRAMADAS.
 CREATE VIEW vista_programar_rutinas AS
-SELECT v.marca AS 'Marca', v.modelo AS 'Modelo y Año', r.nombre AS 'Nombre de la Rutina', r.descripcion AS 'Descripcion de la Rutina', pr.fecha AS 'Fecha de Rutina programada'
+SELECT v.marca AS 'Marca', v.modelo AS 'Modelo y Año', r.nombre AS
+ 'Nombre de la Rutina', r.descripcion AS 'Descripcion de la Rutina', pr.fecha AS 'Fecha de Rutina programada' FROM vehiculos v, rutinas r, programar_rutinas pr;
 
 
 -- MOSTRAR
@@ -136,3 +137,4 @@ CREATE PROCEDURE mostrar_rutinas_programadas(IN _filtro VARCHAR(150))
 BEGIN
 	SELECT * FROM vista_programar_rutinas v WHERE marca LIKE _filtro ORDER BY v.Marca;
 END;;
+

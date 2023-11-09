@@ -33,14 +33,21 @@ namespace MCarCare
             tabla.Columns.Clear();
             tabla.RowTemplate.Height = 30;
             //Fuente de datos.
-            tabla.DataSource = rutinas.Mostrar(filtro).Tables["rutinas"];
+            tabla.DataSource = rutinas.Mostrar(filtro).Tables["programar_rutinas"];
             //AGREGAR BOTONES.
             //EDITAR
-            tabla.Columns.Insert(3, grafico.Boton("Editar", Color.Green));
+            tabla.Columns.Insert(5, grafico.Boton("Editar", Color.Green));
             //BORRAR
-            tabla.Columns.Insert(4, grafico.Boton("Eliminar", Color.Red));
+            tabla.Columns.Insert(6, grafico.Boton("Eliminar", Color.Red));
             //OCULTAR ID
             tabla.Columns[0].Visible = false;
+        }
+
+        public void ExtraerDatos(ComboBox caja, string tabla, string tituloColumna, string elementoDb)
+        {
+            caja.DataSource = rutinas.MostrarCmb().Tables[tabla];
+            caja.DisplayMember = tituloColumna;
+            caja.ValueMember = elementoDb;
         }
     }
 }

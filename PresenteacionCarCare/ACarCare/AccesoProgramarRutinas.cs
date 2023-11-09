@@ -21,5 +21,11 @@ namespace ACarCare
         {
             return baseDatos.Obtener(string.Format("call mostrar_rutinas_programadas('%{0}%')", filtro), "programar_rutinas");
         }
+
+
+        public DataSet MostrarCmb()
+        {
+            return baseDatos.Obtener("SELECT * FROM programar_rutinas ","programar_rutinas");
+        }
     }
 }
