@@ -28,11 +28,11 @@ namespace PresenteacionCarCare
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Validar(@"\A[A-Z]+[a-z]*[0-9]*?\Z",txtMarca.Text,lblMarcaError,"Error, coloque una marca comenzando con una letra mayúscula");
-            Validar(@"\A[A-Z]+[a-z]*[0-9]+?\Z",txtModelo.Text,lblModeloError,"Error, coloque un modelo comenzando con una letra mayúscula y con un año de modelo.");
+            Validar(@"\A[A-Z]+[a-z]*[0-9]*?\Z", txtMarca.Text, lblMarcaError, "Error, coloque una marca comenzando con una letra mayúscula");
+            Validar(@"\A[A-Z]+[a-z]*[0-9]+?\Z", txtModelo.Text, lblModeloError, "Error, coloque un modelo comenzando con una letra mayúscula y con un año de modelo.");
         }
 
-        void Validar(string regex,string textbox, Label label, string error)
+        void Validar(string regex, string textbox, Label label, string error)
         {
             Regex marca = new Regex(regex);
             if (!marca.IsMatch(textbox))
@@ -41,27 +41,12 @@ namespace PresenteacionCarCare
                 MessageBox.Show(label.Text);
             }
 
-            else if (lblModeloError.Text=="" && lblMarcaError.Text=="")
+            else if (lblModeloError.Text == "" && lblMarcaError.Text == "")
             {
                 mv.Guardar(new Vehiculos(FrmVehiculos.vehiculo.IdVehiculo, txtMarca.Text, txtModelo.Text, cmbTipoVehiculo.Text));
                 Close();
             }
 
-        }
-
-        private void txtMarca_TextChanged(object sender, EventArgs e)
-        {
-            LimpiarErrores();
-        }
-
-        private void txtModelo_TextChanged(object sender, EventArgs e)
-        {
-           // LimpiarErrores();
-        }
-        void LimpiarErrores()
-        {
-            lblMarcaError.Text = "";
-            lblModeloError.Text = "";
         }
     }
 }

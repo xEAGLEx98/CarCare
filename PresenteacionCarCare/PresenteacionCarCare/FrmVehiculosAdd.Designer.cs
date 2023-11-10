@@ -43,7 +43,6 @@
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(100, 22);
             this.txtMarca.TabIndex = 0;
-            this.txtMarca.TextChanged += new System.EventHandler(this.txtMarca_TextChanged);
             // 
             // txtModelo
             // 
@@ -51,7 +50,6 @@
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(100, 22);
             this.txtModelo.TabIndex = 2;
-            this.txtModelo.TextChanged += new System.EventHandler(this.txtModelo_TextChanged);
             // 
             // cmbTipoVehiculo
             // 
@@ -88,7 +86,7 @@
             // lblMarcaError
             // 
             this.lblMarcaError.AutoSize = true;
-            this.lblMarcaError.Location = new System.Drawing.Point(157, 86);
+            this.lblMarcaError.Location = new System.Drawing.Point(165, 99);
             this.lblMarcaError.Name = "lblMarcaError";
             this.lblMarcaError.Size = new System.Drawing.Size(44, 16);
             this.lblMarcaError.TabIndex = 6;
@@ -97,7 +95,7 @@
             // lblModeloError
             // 
             this.lblModeloError.AutoSize = true;
-            this.lblModeloError.Location = new System.Drawing.Point(323, 86);
+            this.lblModeloError.Location = new System.Drawing.Point(308, 99);
             this.lblModeloError.Name = "lblModeloError";
             this.lblModeloError.Size = new System.Drawing.Size(44, 16);
             this.lblModeloError.TabIndex = 7;

@@ -23,7 +23,7 @@ namespace MCarCare
         {
             //Guardar y mostrar mensaje de guardado.
             vehiculos.Guardar(entidad);
-            MessageBox.Show("Vehículo guardado correctamente", "!Información!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Rutina guardada correctamente", "!Información!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void Mostrar(DataGridView tabla, string filtro)
