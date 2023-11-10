@@ -10,3 +10,9 @@ C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\ECarCare\obj\Debug\ECarCare
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\ECarCare\obj\Debug\ECarCare.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\ECarCare\obj\Debug\ECarCare.dll
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\ECarCare\obj\Debug\ECarCare.pdb
+C:\Users\LENOVO\Desktop\oidxzmvoi\CarCare\PresenteacionCarCare\ECarCare\bin\Debug\ECarCare.dll
+C:\Users\LENOVO\Desktop\oidxzmvoi\CarCare\PresenteacionCarCare\ECarCare\bin\Debug\ECarCare.pdb
+C:\Users\LENOVO\Desktop\oidxzmvoi\CarCare\PresenteacionCarCare\ECarCare\obj\Debug\ECarCare.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\oidxzmvoi\CarCare\PresenteacionCarCare\ECarCare\obj\Debug\ECarCare.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\oidxzmvoi\CarCare\PresenteacionCarCare\ECarCare\obj\Debug\ECarCare.dll
+C:\Users\LENOVO\Desktop\oidxzmvoi\CarCare\PresenteacionCarCare\ECarCare\obj\Debug\ECarCare.pdb

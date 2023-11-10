@@ -23,7 +23,7 @@ namespace PresenteacionCarCare
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            mrp.Guardar(new ProgramarRutinas(FrmProgramacionRutinas.rutinas.IdRutProgramadas, int.Parse(cmbVehiculos.SelectedValue.ToString()), int.Parse(cmbRutinas.SelectedValue.ToString()),dtpFecha.Text));
+            mrp.Guardar(new ProgramarRutinas(FrmProgramacionRutinas.rutinas.IdRutProgramadas, cmbVehiculos.SelectedValue.ToString(), cmbRutinas.SelectedValue.ToString(),dtpFecha.Text));
             Close();
         }
     }

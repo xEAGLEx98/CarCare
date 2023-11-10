@@ -28,8 +28,10 @@ namespace PresenteacionCarCare
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Validar(@"\A[A-Z]+[a-z]*[0-9]*?\Z", txtMarca.Text, lblMarcaError, "Error, coloque una marca comenzando con una letra mayúscula");
-            Validar(@"\A[A-Z]+[a-z]*[0-9]+?\Z", txtModelo.Text, lblModeloError, "Error, coloque un modelo comenzando con una letra mayúscula y con un año de modelo.");
+            //Validar(@"\A[A-Z]+[a-z]*[0-9]*?\Z", txtMarca.Text, lblMarcaError, "Error, coloque una marca comenzando con una letra mayúscula");
+            //Validar(@"\A[A-Z]+[a-z]*[0-9]+?\Z", txtModelo.Text, lblModeloError, "Error, coloque un modelo comenzando con una letra mayúscula y con un año de modelo.");
+            mv.Guardar(new Vehiculos(FrmVehiculos.vehiculo.IdVehiculo, txtMarca.Text, txtModelo.Text, cmbTipoVehiculo.Text));
+            Close();
         }
 
         void Validar(string regex, string textbox, Label label, string error)

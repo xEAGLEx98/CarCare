@@ -7,7 +7,7 @@ namespace PresenteacionCarCare
         [STAThread]
         static void Main()
         {
-            Application.Run(new FrmVehiculos());
+            Application.Run(new FrmProgramacionRutinas());
         }
     }
 }
