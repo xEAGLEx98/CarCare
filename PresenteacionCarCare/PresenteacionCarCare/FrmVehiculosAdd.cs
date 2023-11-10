@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MCarCare;
 using ECarCare;
+using System.Text.RegularExpressions;
+
 namespace PresenteacionCarCare
 {
     public partial class FrmVehiculosAdd : Form
@@ -22,6 +17,7 @@ namespace PresenteacionCarCare
             {
                 txtMarca.Text = FrmVehiculos.vehiculo.Marca.ToString();
                 txtModelo.Text = FrmVehiculos.vehiculo.Modelo.ToString();
+                cmbTipoVehiculo.Text = FrmVehiculos.vehiculo.TipoVehiculo.ToString();
             }
         }
 
@@ -32,13 +28,25 @@ namespace PresenteacionCarCare
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            mv.Guardar(new Vehiculos(FrmVehiculos.vehiculo.IdVehiculo, txtMarca.Text, txtModelo.Text, cmbTipoVehiculo.Text));
-            Close();
+            Validar(@"\A[A-Z]+[a-z]*[0-9]*?\Z", txtMarca.Text, lblMarcaError, "Error, coloque una marca comenzando con una letra mayúscula");
+            Validar(@"\A[A-Z]+[a-z]*[0-9]+?\Z", txtModelo.Text, lblModeloError, "Error, coloque un modelo comenzando con una letra mayúscula y con un año de modelo.");
         }
-        void Limpiar()
+
+        void Validar(string regex, string textbox, Label label, string error)
         {
-            txtMarca.Clear();
-            txtModelo.Clear();
+            Regex marca = new Regex(regex);
+            if (!marca.IsMatch(textbox))
+            {
+                label.Text = error;
+                MessageBox.Show(label.Text);
+            }
+
+            else if (lblModeloError.Text == "" && lblMarcaError.Text == "")
+            {
+                mv.Guardar(new Vehiculos(FrmVehiculos.vehiculo.IdVehiculo, txtMarca.Text, txtModelo.Text, cmbTipoVehiculo.Text));
+                Close();
+            }
+
         }
     }
 }

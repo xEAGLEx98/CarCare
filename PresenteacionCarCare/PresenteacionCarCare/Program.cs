@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace PresenteacionCarCare
 {
@@ -11,7 +7,7 @@ namespace PresenteacionCarCare
         [STAThread]
         static void Main()
         {
-            Application.Run(new FrmProgramacionRutinas());
+            Application.Run(new FrmVehiculos());
         }
     }
 }
