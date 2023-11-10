@@ -125,11 +125,10 @@ BEGIN
 END;;
 
 -- VISTA PARA MOSTRAR RUTINAS PROGRAMADAS.
-CREATE VIEW vista_programar_rutinas AS
-SELECT v.marca AS 'Marca', v.modelo AS 'Modelo y Año', r.nombre AS
- 'Nombre de la Rutina', r.descripcion AS 'Descripcion de la Rutina', pr.fecha AS 'Fecha de Rutina programada' FROM vehiculos v, rutinas r, programar_rutinas pr;
+CREATE VIEW vista_programar_rutinas AS SELECT pr.id_rut_programadas, v.marca, r.nombre, pr.fecha FROM programar_rutinas pr
+JOIN vehiculos v ON pr.fk_id_vehiculos = v.id_vehiculos JOIN rutinas r ON pr.fk_id_rutinas = r.id_rutinas;
 
-
+SELECT * FROM vista_programar_rutinas;
 -- MOSTRAR
 DROP PROCEDURE IF EXISTS mostrar_rutinas_programadas 
 delimiter ;;
