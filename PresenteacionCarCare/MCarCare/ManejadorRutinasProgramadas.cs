@@ -12,7 +12,7 @@ namespace MCarCare
         public void Borrar(dynamic entidad)
         {
             //Tomar el resultado del messagebox.
-            DialogResult resultado = MessageBox.Show(String.Format("¿Desea eliminar este registro {0}?", entidad.Nombre), "!Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("¿Desea eliminar este registro?", "!Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //Si el resultado es si en la pregunta de desea eliminar.
             if (resultado == DialogResult.Yes)
                 //Borrar registro.
@@ -45,6 +45,10 @@ namespace MCarCare
 
         public void ExtraerDatos(ComboBox caja)
         {
+            //Si el nombre del ComboBox es x o y:
+            //Ejecuta la consulta de la tabla x
+            //Trae a la vista del combobox el elemento x de la tabla.
+            //toma el valor x de la tabla para el combobox.
             if(caja.Name == "cmbVehiculos")
             {
                 caja.DataSource = rutinas.MostrarCmb("SELECT id_vehiculos, modelo FROM vehiculos;", "vehiculos").Tables["vehiculos"];

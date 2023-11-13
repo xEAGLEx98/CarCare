@@ -12,18 +12,21 @@ namespace PresenteacionCarCare
         {
             InitializeComponent();
             mrp = new ManejadorRutinasProgramadas();
+            //Llamar desde el manejador a la función Extraer para traer los datos de la base de datos al comboBox.
             mrp.ExtraerDatos(cmbVehiculos);
             mrp.ExtraerDatos(cmbRutinas);
             if (FrmProgramacionRutinas.rutinas.IdRutProgramadas > 0)
             {
-                cmbVehiculos.Text = FrmProgramacionRutinas.marcaVehiculo;
-                cmbVehiculos.Text = FrmProgramacionRutinas.nombreRutina;
+                //Tomar los datos seleccionados al editar.
+                cmbVehiculos.Text = FrmProgramacionRutinas.modeloVehiculo;
+                cmbRutinas.Text = FrmProgramacionRutinas.descripcionRutina;
             }
         }
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            mrp.Guardar(new ProgramarRutinas(FrmProgramacionRutinas.rutinas.IdRutProgramadas, cmbVehiculos.SelectedValue.ToString(), cmbRutinas.SelectedValue.ToString(),dtpFecha.Text));
+            //Guardar la información.
+            mrp.Guardar(new ProgramarRutinas(FrmProgramacionRutinas.rutinas.IdRutProgramadas, int.Parse(cmbVehiculos.SelectedValue.ToString()), int.Parse(cmbRutinas.SelectedValue.ToString()),dtpFecha.Text));
             Close();
         }
     }

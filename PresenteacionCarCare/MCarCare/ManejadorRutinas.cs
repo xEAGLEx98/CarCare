@@ -36,9 +36,11 @@ namespace MCarCare
             tabla.DataSource = rutinas.Mostrar(filtro).Tables["rutinas"];
             //AGREGAR BOTONES.
             //EDITAR
-            tabla.Columns.Insert(2, grafico.Boton("Editar", Color.Green));
+            tabla.Columns.Insert(3, grafico.Boton("Editar", Color.Green));
             //BORRAR
-            tabla.Columns.Insert(3, grafico.Boton("Eliminar", Color.Red));
+            tabla.Columns.Insert(4, grafico.Boton("Eliminar", Color.Red));
+            //OCULTAR ID
+            tabla.Columns[0].Visible = false;
 
 
         }

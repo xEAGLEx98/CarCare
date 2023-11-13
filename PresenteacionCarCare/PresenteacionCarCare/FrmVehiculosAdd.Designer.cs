@@ -35,6 +35,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblMarcaError = new System.Windows.Forms.Label();
             this.lblModeloError = new System.Windows.Forms.Label();
+            this.lblErrorTipoVehiculo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtMarca
@@ -43,6 +44,7 @@
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(100, 22);
             this.txtMarca.TabIndex = 0;
+            this.txtMarca.TextChanged += new System.EventHandler(this.txtMarca_TextChanged);
             // 
             // txtModelo
             // 
@@ -50,6 +52,7 @@
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(100, 22);
             this.txtModelo.TabIndex = 2;
+            this.txtModelo.TextChanged += new System.EventHandler(this.txtModelo_TextChanged);
             // 
             // cmbTipoVehiculo
             // 
@@ -101,11 +104,21 @@
             this.lblModeloError.TabIndex = 7;
             this.lblModeloError.Text = "label2";
             // 
+            // lblErrorTipoVehiculo
+            // 
+            this.lblErrorTipoVehiculo.AutoSize = true;
+            this.lblErrorTipoVehiculo.Location = new System.Drawing.Point(513, 109);
+            this.lblErrorTipoVehiculo.Name = "lblErrorTipoVehiculo";
+            this.lblErrorTipoVehiculo.Size = new System.Drawing.Size(44, 16);
+            this.lblErrorTipoVehiculo.TabIndex = 8;
+            this.lblErrorTipoVehiculo.Text = "label1";
+            // 
             // FrmVehiculosAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblErrorTipoVehiculo);
             this.Controls.Add(this.lblModeloError);
             this.Controls.Add(this.lblMarcaError);
             this.Controls.Add(this.btnCancelar);
@@ -129,5 +142,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblMarcaError;
         private System.Windows.Forms.Label lblModeloError;
+        private System.Windows.Forms.Label lblErrorTipoVehiculo;
     }
 }

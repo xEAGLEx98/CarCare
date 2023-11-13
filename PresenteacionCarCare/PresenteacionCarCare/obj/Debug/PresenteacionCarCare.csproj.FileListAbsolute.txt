@@ -150,3 +150,4 @@ C:\Users\LENOVO\Desktop\oidxzmvoi\CarCare\PresenteacionCarCare\PresenteacionCarC
 C:\Users\LENOVO\Desktop\oidxzmvoi\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.csproj.CopyComplete
 C:\Users\LENOVO\Desktop\oidxzmvoi\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.exe
 C:\Users\LENOVO\Desktop\oidxzmvoi\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.pdb
+C:\Users\LENOVO\Desktop\oidxzmvoi\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.FrmMenu.resources

@@ -12,7 +12,7 @@ namespace MCarCare
         public void Borrar(dynamic entidad)
         {
             //Tomar el resultado del messagebox.
-            DialogResult resultado = MessageBox.Show(String.Format("¿Desea eliminar este registro {0}?", entidad.Marca), "!Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show(String.Format("¿Desea eliminar este vehículo {0}?", entidad.Modelo), "!Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //Si el resultado es si en la pregunta de desea eliminar.
             if (resultado == DialogResult.Yes)
                 //Borrar registro.
@@ -23,7 +23,7 @@ namespace MCarCare
         {
             //Guardar y mostrar mensaje de guardado.
             vehiculos.Guardar(entidad);
-            MessageBox.Show("Rutina guardada correctamente", "!Información!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Vehículo guardado correctamente", "!Información!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void Mostrar(DataGridView tabla, string filtro)
