@@ -49,7 +49,6 @@ namespace PresenteacionCarCare
             if (!marca.IsMatch(textbox))
             {
                 label.Text = error;
-                MessageBox.Show(error);
                 return false;
             }
             return true;

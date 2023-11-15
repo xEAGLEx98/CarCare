@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MCarCare;
+using System;
 using System.Windows.Forms;
-
 namespace PresenteacionCarCare
 {
     public partial class FrmMenu : Form
     {
+        ManejadorRutinasProgramadas mrp;
         public FrmMenu()
         {
             InitializeComponent();
+            mrp = new ManejadorRutinasProgramadas();
         }
 
         private void btnVehiculos_Click(object sender, EventArgs e)
@@ -33,6 +28,11 @@ namespace PresenteacionCarCare
         {
             FrmProgramacionRutinas rutina = new FrmProgramacionRutinas();
             rutina.ShowDialog();
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            mrp.Notificaciones(dtgNotificaciones);
         }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Crud;
+
 namespace MCarCare
 {
     public class ManejadorRutinasProgramadas : ICrud
@@ -62,5 +63,53 @@ namespace MCarCare
                 caja.ValueMember = "id_rutinas";
             }
         }
+        public void Notificaciones(DataGridView tabla)
+        {
+            tabla.Visible = false;
+            tabla.DataSource = rutinas.MostrarNoti().Tables["programar_rutinas"];
+
+            // Lista para almacenar los números de día como enteros
+            if (tabla != null)
+            {
+                // Recorrer las filas del control de interfaz gráfica (DataGridView)
+                try
+                {
+                    foreach (DataGridViewRow fila in tabla.Rows)
+                    {
+                        if (!fila.IsNewRow) // Evitar la última fila (fila nueva en blanco)
+                        {
+                            object valorCeldaFecha = fila.Cells["fecha"].Value;
+                            object valorCeldaModelo = fila.Cells["modelo"].Value;
+                            object valorCeldaDescripcion = fila.Cells["descripcion"].Value;
+
+                            if (valorCeldaFecha != null && valorCeldaModelo != null && valorCeldaDescripcion != null)
+                            {
+                                string fechaEnCadena = valorCeldaFecha.ToString();
+                                string modeloVehiculo = valorCeldaModelo.ToString();
+                                string descripcionRutina = valorCeldaDescripcion.ToString();
+
+                                if (DateTime.TryParse(fechaEnCadena, out DateTime fecha))
+                                {
+                                    int fechaActual = DateTime.Now.Day;
+                                    int numeroDeDia = fecha.Day;
+
+                                    if (fechaActual == (numeroDeDia - 1))
+                                    {
+                                        string mensaje = $"El vehículo ({modeloVehiculo}) tiene una rutina ({descripcionRutina}) que debe ser hecha el {fechaEnCadena}";
+                                        MessageBox.Show(mensaje, "Alerta de rutina", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+                }
+            }
+
+        }
+
     }
 }

@@ -41,8 +41,6 @@ namespace MCarCare
             tabla.Columns.Insert(4, grafico.Boton("Eliminar", Color.Red));
             //OCULTAR ID
             tabla.Columns[0].Visible = false;
-
-
         }
     }
 }

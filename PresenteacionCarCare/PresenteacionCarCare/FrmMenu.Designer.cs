@@ -31,6 +31,8 @@
             this.btnVehiculos = new System.Windows.Forms.Button();
             this.btnRutinas = new System.Windows.Forms.Button();
             this.btnProgramarRutinas = new System.Windows.Forms.Button();
+            this.dtgNotificaciones = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgNotificaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVehiculos
@@ -63,16 +65,29 @@
             this.btnProgramarRutinas.UseVisualStyleBackColor = true;
             this.btnProgramarRutinas.Click += new System.EventHandler(this.btnProgramarRutinas_Click);
             // 
+            // dtgNotificaciones
+            // 
+            this.dtgNotificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgNotificaciones.Location = new System.Drawing.Point(683, 325);
+            this.dtgNotificaciones.Name = "dtgNotificaciones";
+            this.dtgNotificaciones.RowHeadersWidth = 51;
+            this.dtgNotificaciones.RowTemplate.Height = 24;
+            this.dtgNotificaciones.Size = new System.Drawing.Size(10, 10);
+            this.dtgNotificaciones.TabIndex = 3;
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dtgNotificaciones);
             this.Controls.Add(this.btnProgramarRutinas);
             this.Controls.Add(this.btnRutinas);
             this.Controls.Add(this.btnVehiculos);
             this.Name = "FrmMenu";
             this.Text = "FrmMenu";
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgNotificaciones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,5 +97,6 @@
         private System.Windows.Forms.Button btnVehiculos;
         private System.Windows.Forms.Button btnRutinas;
         private System.Windows.Forms.Button btnProgramarRutinas;
+        private System.Windows.Forms.DataGridView dtgNotificaciones;
     }
 }
