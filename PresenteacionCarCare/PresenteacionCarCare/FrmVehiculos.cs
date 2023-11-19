@@ -11,12 +11,14 @@ namespace PresenteacionCarCare
         //entidad de vehiculos.
         public static Vehiculos vehiculo = new Vehiculos(0, "", "", "");
         ManejadorVehiculos mv;
+        ManejadorRutinasProgramadas mrp;
         //Variable de la fila y columna de la tabla..
         int fila = 0, columna = 0;
         public FrmVehiculos()
         {
             InitializeComponent();
             mv = new ManejadorVehiculos();
+            mrp = new ManejadorRutinasProgramadas();
         }
         //Mostrar vehiculos por filtro
         void Actualizar()
@@ -71,8 +73,15 @@ namespace PresenteacionCarCare
         }
         void Styles()
         {
-            //PANEL
+            //PANEL NAV
             panel1.BackColor = ColorTranslator.FromHtml("#f5f5f5");
+            //PANEL INFO
+            panel2.BackColor = ColorTranslator.FromHtml("#b5cbf4");
+            lblMarca.ForeColor = ColorTranslator.FromHtml("#3f5682");
+            lblModelo.ForeColor = ColorTranslator.FromHtml("#3f5682");
+            lblTipo.ForeColor = ColorTranslator.FromHtml("#3f5682");
+            lblControl.ForeColor = ColorTranslator.FromHtml("#3f5682");
+
             txtBuscarMarca.BackColor = ColorTranslator.FromHtml("#d1dbe7");
             this.BackColor = ColorTranslator.FromHtml("#eaedf2");
             lblVehiculos.ForeColor = ColorTranslator.FromHtml("#676767");
@@ -89,6 +98,7 @@ namespace PresenteacionCarCare
             // Ocultar encabezados de fila y columna
             dtgVehiculos.RowHeadersVisible = false;
             dtgVehiculos.ColumnHeadersVisible = false;
+            lblSalir.ForeColor = ColorTranslator.FromHtml("#f86869");
         }
 
         private void dtgVehiculos_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -107,6 +117,23 @@ namespace PresenteacionCarCare
         {
             FrmVehiculos vehiculo = new FrmVehiculos();
             vehiculo.ShowDialog();
+        }
+
+        private void lblRutinas_Click(object sender, EventArgs e)
+        {
+            FrmRutinas rutina = new FrmRutinas();
+            rutina.ShowDialog();
+        }
+
+        private void lblProgramarRutinas_Click(object sender, EventArgs e)
+        {
+            FrmProgramacionRutinas rutina = new FrmProgramacionRutinas();
+            rutina.ShowDialog();
+        }
+
+        private void lblSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void txtBuscarMarca_TextChanged(object sender, EventArgs e)

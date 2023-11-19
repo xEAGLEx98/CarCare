@@ -157,7 +157,6 @@ C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\bin\De
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\bin\Debug\System.ServiceProcess.ServiceController.xml
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\bin\Debug\System.Threading.AccessControl.xml
-C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.FrmMenu.resources
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.csproj.Fody.CopyLocal.cache
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.RoundedTextBox.resources
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.Properties.Resources.resources

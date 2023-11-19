@@ -32,16 +32,18 @@ namespace MCarCare
         {
             //Limpiar tabla
             tabla.Columns.Clear();
-            tabla.RowTemplate.Height = 30;
+            tabla.RowTemplate.Height = 40;
             //Fuente de datos.
             tabla.DataSource = rutinas.Mostrar(filtro).Tables["programar_rutinas"];
             //AGREGAR BOTONES.
             //EDITAR
-            tabla.Columns.Insert(4, grafico.Boton("Editar", Color.Green));
+            tabla.Columns.Insert(4, grafico.Boton("Editar", ColorTranslator.FromHtml("#4467cc")));
             //BORRAR
-            tabla.Columns.Insert(5, grafico.Boton("Eliminar", Color.Red));
+            tabla.Columns.Insert(5, grafico.Boton("Eliminar", ColorTranslator.FromHtml("#f96767")));
             //OCULTAR ID
             tabla.Columns[0].Visible = false;
+            tabla.Columns[2].Width = 240;
+            tabla.Columns[3].Width = 210;
         }
 
         public void ExtraerDatos(ComboBox caja)

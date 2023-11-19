@@ -1,6 +1,7 @@
 ﻿using ECarCare;
 using MCarCare;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PresenteacionCarCare
@@ -22,17 +23,18 @@ namespace PresenteacionCarCare
             }
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             //Valida que los textos estén entre un rango de caracteres y si es así guarda.
-            if(Validar(txtNombre.Text,20,3,lblErrorNombre,"Error, su nombre de la rutina debe tener entre 3 y 20 caracteres.")&&
-               Validar(txtDescripcion.Text,100,20,lblErrorDescripcion,"Error, ingrese una descripcion entre los 20 y 100 caracteres."))
+            if (Validar(txtNombre.Text, 20, 3, lblErrorNombre, "Error, su nombre de la rutina debe tener entre 3 y 20 caracteres.") &&
+               Validar(txtDescripcion.Text, 100, 20, lblErrorDescripcion, "Error, ingrese una descripcion entre los 20 y 100 caracteres."))
             {
                 //Guardar de la función del manejador.
                 mR.Guardar(new Rutinas(FrmRutinas.rutina.IdRutinas, txtNombre.Text, txtDescripcion.Text));
                 Close();
             }
         }
+
         //Funcion validar.
         bool Validar(string texto,int limiteMayor, int limiteMenor, Label etiqueta, string mensajeError)
         {
@@ -58,6 +60,26 @@ namespace PresenteacionCarCare
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
             LimpiarErrores();
+        }
+        private void FrmAddRutinas_Load(object sender, EventArgs e)
+        {
+            LimpiarErrores();
+            Style();
+        }
+        void Style()
+        {
+            btnAgregar.BackColor = ColorTranslator.FromHtml("#3d67dd");
+            btnCancelar.ForeColor = ColorTranslator.FromHtml("#f6686c");
+            txtNombre.ForeColor = ColorTranslator.FromHtml("#565656");
+            txtNombre.BackColor = ColorTranslator.FromHtml("#cfd2d7");
+            txtDescripcion.BackColor = ColorTranslator.FromHtml("#cfd2d7");
+            lblErrorNombre.ForeColor = ColorTranslator.FromHtml("#f6686c");
+            lblErrorDescripcion.ForeColor = ColorTranslator.FromHtml("#f6686c");
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
