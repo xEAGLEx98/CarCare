@@ -160,3 +160,4 @@ C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\bin\De
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.FrmMenu.resources
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.csproj.Fody.CopyLocal.cache
 C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.RoundedTextBox.resources
+C:\Users\LENOVO\Desktop\CarCare\PresenteacionCarCare\PresenteacionCarCare\obj\Debug\PresenteacionCarCare.Properties.Resources.resources

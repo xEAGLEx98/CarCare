@@ -71,23 +71,24 @@ namespace PresenteacionCarCare
         }
         void Styles()
         {
+            //PANEL
+            panel1.BackColor = ColorTranslator.FromHtml("#f5f5f5");
             txtBuscarMarca.BackColor = ColorTranslator.FromHtml("#d1dbe7");
             this.BackColor = ColorTranslator.FromHtml("#eaedf2");
             lblVehiculos.ForeColor = ColorTranslator.FromHtml("#676767");
             lblRutinas.ForeColor = ColorTranslator.FromHtml("#cdcdcd");
             lblProgramarRutinas.ForeColor = ColorTranslator.FromHtml("#cdcdcd");
             btnAñadir.BackColor = ColorTranslator.FromHtml("#abd573");
-            //dtgVehiculos.BackgroundColor = ColorTranslator.FromHtml("#eaedf2");
             // Configurar el DataGridView
             dtgVehiculos.BorderStyle = BorderStyle.None;
-            dtgVehiculos.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dtgVehiculos.BackgroundColor = ColorTranslator.FromHtml("#eaedf2");
+            dtgVehiculos.ForeColor = ColorTranslator.FromHtml("#676767");
 
+            //dtgVehiculos.BackgroundColor = ColorTranslator.FromHtml("#eaedf2");
+            dtgVehiculos.CellBorderStyle = DataGridViewCellBorderStyle.None;
             // Ocultar encabezados de fila y columna
             dtgVehiculos.RowHeadersVisible = false;
             dtgVehiculos.ColumnHeadersVisible = false;
-
-            // Configurar el espaciado entre las filas
-            dtgVehiculos.RowTemplate.Height = 60;
         }
 
         private void dtgVehiculos_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -100,6 +101,12 @@ namespace PresenteacionCarCare
                     e.Graphics.DrawLine(pen, e.CellBounds.Left, e.CellBounds.Bottom - 1, e.CellBounds.Right, e.CellBounds.Bottom - 1);
                 }
             }
+        }
+
+        private void lblVehiculos_Click(object sender, EventArgs e)
+        {
+            FrmVehiculos vehiculo = new FrmVehiculos();
+            vehiculo.ShowDialog();
         }
 
         private void txtBuscarMarca_TextChanged(object sender, EventArgs e)
