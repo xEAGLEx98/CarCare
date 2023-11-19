@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using ECarCare;
 using MCarCare;
@@ -62,6 +63,43 @@ namespace PresenteacionCarCare
             //Tomar el valor de fila y columna.
             fila = e.RowIndex;
             columna = e.ColumnIndex;
+        }
+
+        private void FrmVehiculos_Load(object sender, EventArgs e)
+        {
+            Styles();
+        }
+        void Styles()
+        {
+            txtBuscarMarca.BackColor = ColorTranslator.FromHtml("#d1dbe7");
+            this.BackColor = ColorTranslator.FromHtml("#eaedf2");
+            lblVehiculos.ForeColor = ColorTranslator.FromHtml("#676767");
+            lblRutinas.ForeColor = ColorTranslator.FromHtml("#cdcdcd");
+            lblProgramarRutinas.ForeColor = ColorTranslator.FromHtml("#cdcdcd");
+            btnAñadir.BackColor = ColorTranslator.FromHtml("#abd573");
+            //dtgVehiculos.BackgroundColor = ColorTranslator.FromHtml("#eaedf2");
+            // Configurar el DataGridView
+            dtgVehiculos.BorderStyle = BorderStyle.None;
+            dtgVehiculos.CellBorderStyle = DataGridViewCellBorderStyle.None;
+
+            // Ocultar encabezados de fila y columna
+            dtgVehiculos.RowHeadersVisible = false;
+            dtgVehiculos.ColumnHeadersVisible = false;
+
+            // Configurar el espaciado entre las filas
+            dtgVehiculos.RowTemplate.Height = 60;
+        }
+
+        private void dtgVehiculos_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Agregar líneas divisorias entre las filas
+            if (e.RowIndex > -1 && e.RowIndex < dtgVehiculos.RowCount - 1)
+            {
+                using (Pen pen = new Pen(Color.White))
+                {
+                    e.Graphics.DrawLine(pen, e.CellBounds.Left, e.CellBounds.Bottom - 1, e.CellBounds.Right, e.CellBounds.Bottom - 1);
+                }
+            }
         }
 
         private void txtBuscarMarca_TextChanged(object sender, EventArgs e)
